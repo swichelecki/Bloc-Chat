@@ -1,3 +1,7 @@
-<div ng-repeat="room in chatRooms.all track by $index">
-    {{ room }}
-</div>
+<section class="left-side-bloc-chat">
+    <h1>Bloc Chat</h1>
+    <button type="button" class="new-chat-button" ng-click="$ctrl.open('sm')">New room</button>
+        <div class="room-names" ng-repeat="room in chatRooms.all track by $index">
+            {{ room.$value }}
+        </div>
+</section>    

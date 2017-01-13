@@ -1,0 +1,129 @@
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+/* LEFT COLUMN */
+
+.left-side-bloc-chat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 20rem;
+    background-color: #cbcbcb;   
+}
+
+h1 {
+    padding-left: 2rem;
+    margin-top: 2rem;
+    padding-top: 0rem;
+    width: 12rem;
+    font-size: 32px;
+    display: inline-block;
+}
+
+.room-names {
+    padding-left: 2rem;
+    padding-bottom: .5rem;
+    font-size: 18px;
+    color: #666;
+}
+
+.new-chat-button {
+    margin-left: 0.2rem;
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 8px 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:focus {
+    outline:0;
+}
+
+/* END LEFT COLUMN */
+
+/* MODAL */
+
+.modal-container {
+    height: 15rem;
+    width: 25rem;
+    background-color: #cbcbcb;
+    padding: 1rem 2.5rem; 
+}
+
+.modal-content {
+    border: none;
+    background-color: #cbcbcb;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+}
+
+h2 {
+}
+
+.modal-text {
+    color: #666;
+    font-size: 16px;
+}
+
+.input {
+    height: 3rem;
+    width: 20rem;
+    color: #666;
+    font-size: 16px;
+    border: none;
+    outline-width: 0;
+}
+
+.modal-cancel {
+    width: 8rem;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 8px 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+}
+
+.modal-ok {
+    width: 8rem;
+    font-size: 18px;
+    background-color: #666;
+    color: #f0f0f0;
+    padding: 8px 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-footer {
+    width: 20rem;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* END MODAL */

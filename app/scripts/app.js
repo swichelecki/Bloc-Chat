@@ -9,13 +9,13 @@
         $stateProvider
             .state('landing', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
+                controller: 'LandingCtrl as $ctrl',
                 templateUrl: '/templates/landing.html'
         });
     }
     
     angular
-        .module('bloc-chat', ['ui.router', 'firebase'])
+        .module('bloc-chat', ['ui.router', 'ui.bootstrap', 'firebase'])
         .config(config);
     
 })();
