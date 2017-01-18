@@ -1,7 +1,23 @@
-<section class="left-side-bloc-chat">
-    <h1>Bloc Chat</h1>
-    <button type="button" class="new-chat-button" ng-click="$ctrl.open('sm')">New room</button>
-        <div class="room-names" ng-repeat="room in chatRooms.all track by $index">
-            {{ room.$value }}
-        </div>
-</section>    
+<div>
+    <section class="left-side-bloc-chat">
+        <h1>Bloc Chat</h1>
+        <button type="button" class="new-chat-button" ng-click="$ctrl.open('sm')">New room</button>
+            <div class="room-names" ng-repeat="room in $ctrl.chatRooms.all track by $index">
+                <a ng-click="$ctrl.chatRooms.setRoom(room); $ctrl.getMessages(room.$id)">{{ room.$value }}</a>
+            </div>
+    </section>    
+    <section class="bloc-chat-view">
+        <h2> {{ $ctrl.chatRooms.activeRoom.$value }} </h2>
+    </section>
+    <section class="chat-messages" ng-repeat="message in $ctrl.messages">
+        <table>
+            <tr ng-class-odd="'row-color'">
+                <td class="chat-time-stamp"><em>{{ message.sentAt }}</em></td>
+                <td class="chat-message-name"><strong>{{ message.username }}</strong></td>
+            </tr>
+            <tr ng-class-odd="'row-color'">
+                <td class="chat-message">{{ message.content }}</td>
+            </tr>
+        </table>
+    </section>
+</div>

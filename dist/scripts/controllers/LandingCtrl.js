@@ -1,11 +1,19 @@
 (function() {
-    function LandingCtrl($scope, Room, $uibModal) {
-        
-        $scope.chatRooms = Room;   
-        
+    function LandingCtrl(Room, Message, $uibModal) {
         var $ctrl = this;
         
-        $ctrl.open = function(size) {
+        this.chatRooms = Room;   
+        
+        this.messages = [];
+        
+        this.getMessages = function (roomId) {
+          Message.getByRoomId(roomId).on("value", function (data) {
+           //  console.log(data.val(), ">>>>");
+             $ctrl.messages = data.val(); 
+          });
+        };
+        
+        this.open = function(size) {
             
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
@@ -25,6 +33,6 @@
     
     angular
         .module('bloc-chat')
-        .controller('LandingCtrl', ['$scope','Room', '$uibModal', LandingCtrl]);
+        .controller('LandingCtrl', ['Room', 'Message', '$uibModal', LandingCtrl]);
     
 })();

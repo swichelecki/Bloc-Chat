@@ -1,13 +1,13 @@
 (function() {
-    function ModalCtrl($uibModalInstance, Room, $scope) {   
+    function ModalCtrl($uibModalInstance, Room) {   
     
-    $scope.chatRooms = Room;   
+    this.chatRooms = Room;   
           
     var $ctrl = this;
         
      $ctrl.ok = function(newRoom) {   
         $uibModalInstance.close();
-        $scope.chatRooms.createRoom(newRoom);
+        this.chatRooms.createRoom(newRoom);
      };
         
     $ctrl.cancel = function() {
@@ -18,6 +18,6 @@
     
     angular
         .module('bloc-chat')
-        .controller('ModalCtrl', ['$uibModalInstance', 'Room', '$scope', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', 'Room', ModalCtrl]);
     
 })();

@@ -40,7 +40,7 @@
             rooms.$remove();
         }); */
         
-        /*rooms.$loaded().then(function() {
+        /* rooms.$loaded().then(function() {
             for (var i = 0; i < rooms.length; i++) {
                     rooms.$remove(rooms[i]);
             }
@@ -53,6 +53,9 @@
         */
         Room.all = rooms;
         
+        
+        Room.activeRoom = null;
+        
         /**
         * @function createRoom
         * @desc sends user input to addRoom
@@ -61,6 +64,15 @@
         Room.createRoom = function(newRoom) {
             addRoom(newRoom);
         };
+        
+        
+        Room.setRoom = function(room) {
+            Room.activeRoom = room;
+            Room.roomId = Room.activeRoom.$id; //need to associate this with messages
+            console.log("This is the room id: ", Room.roomId);
+            //Message.addId(Room.roomId);
+        };
+        
   
         return Room;
     }
@@ -68,5 +80,5 @@
     angular
         .module('bloc-chat')
         .factory('Room', ['$firebaseArray', Room]);
-    
+
 })();

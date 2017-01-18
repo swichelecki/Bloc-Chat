@@ -40,6 +40,17 @@ h1 {
     color: #666;
 }
 
+a {
+    color: #666;
+    cursor: pointer;
+  
+}
+
+a:hover {
+    text-decoration: none; 
+    color: ;
+}
+
 .new-chat-button {
     margin-left: 0.2rem;
     background-color: #f0f0f0;
@@ -127,3 +138,54 @@ h2 {
 }
 
 /* END MODAL */
+
+/* BLOC CHAT VIEW */
+
+.bloc-chat-view {
+    float: right;
+    width: 70rem;
+    height: 5rem;
+    border-bottom: 1px solid #f6f7fb;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 20rem;
+    font-size: 26px;
+}
+
+.chat-messages {
+    float: right;
+    height: 4.5rem;
+    width: 70rem;
+    border-bottom: 1px solid #f6f7fb;
+}
+
+.chat-message-name {
+    display: block;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.chat-message {
+    display: block;
+    padding-left: 2rem;
+}
+
+.chat-time-stamp {
+    padding-top: 1rem;
+    float: right;
+    padding-right: 2rem;
+}
+
+table {
+    width: 70rem;
+    height: 4.5rem;
+}
+
+.row-color {
+    background-color: #f6f7fb;
+}
+
+/* END BLOC CHAT VIEW */
