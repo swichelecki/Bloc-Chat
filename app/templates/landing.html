@@ -1,4 +1,4 @@
-<div>
+<div class="bloc-chat-wrapper">
     <section class="left-side-bloc-chat">
         <h1>Bloc Chat</h1>
         <button type="button" class="new-chat-button" ng-click="$ctrl.open('sm')">New room</button>
@@ -7,7 +7,7 @@
             </div>
     </section>    
     <section class="bloc-chat-view">
-        <h2> {{ $ctrl.chatRooms.activeRoom.$value }} </h2>
+        <h2 class="active-room"> {{ $ctrl.chatRooms.activeRoom.$value }} </h2>
     </section>
     <section class="chat-messages" ng-repeat="message in $ctrl.messages">
         <table>

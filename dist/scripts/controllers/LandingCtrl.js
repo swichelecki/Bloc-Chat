@@ -6,7 +6,7 @@
         
         this.messages = [];
         
-        this.getMessages = function (roomId) {
+        this.getMessages = function(roomId) {
           Message.getByRoomId(roomId).on("value", function (data) {
            //  console.log(data.val(), ">>>>");
              $ctrl.messages = data.val(); 

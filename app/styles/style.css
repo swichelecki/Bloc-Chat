@@ -13,6 +13,13 @@ body {
     min-height: 100%;
 }
 
+.bloc-chat-wrapper {
+    position: relative;
+    padding-left: 20rem;
+   /* min-height: 720px;*/
+    min-height: 45rem;
+}
+
 /* LEFT COLUMN */
 
 .left-side-bloc-chat {
@@ -139,26 +146,54 @@ h2 {
 
 /* END MODAL */
 
+/* USERNAME MODEL */
+
+.modal-container-run {
+    height: 15rem;
+    width: 25rem;
+    background-color: #cbcbcb;
+    padding: .5rem 2.5rem; 
+}
+
+.modal-footer-run {
+    width: 20rem;
+}
+
+.modal-set-name {
+    margin-top: .5rem;
+    width: 20rem;
+    font-size: 18px;
+    background-color: #666;
+    color: #f0f0f0;
+    padding: 8px 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* END USERNAME MODEL */
+
 /* BLOC CHAT VIEW */
 
 .bloc-chat-view {
-    float: right;
-    width: 70rem;
+   /* float: right;
+    width: 70rem; */
+    padding-top: 2rem;
     height: 5rem;
     border-bottom: 1px solid #f6f7fb;
 }
 
-h2 {
-    margin-top: 2rem;
-    margin-left: 2rem;
+.active-room {
+    margin: 0 0 0 2rem;
     width: 20rem;
     font-size: 26px;
 }
 
 .chat-messages {
-    float: right;
+   /* float: right; */
     height: 4.5rem;
-    width: 70rem;
+   /* width: 70rem; */
     border-bottom: 1px solid #f6f7fb;
 }
 
@@ -180,7 +215,7 @@ h2 {
 }
 
 table {
-    width: 70rem;
+    width: 100%;
     height: 4.5rem;
 }
 
