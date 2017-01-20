@@ -19,10 +19,14 @@
         * @param roomId
         */
         return {
-            all: messages,
+            all: messages, //probably going to have to move 'messages'...maybe?
             getByRoomId: function(roomId) {
                 console.log("get room by id is called", roomId);
                 return ref.orderByChild("roomId").equalTo(roomId);
+            },
+            send: function(messageObject) {
+                console.log("testing send() in Message factory: ", messageObject);
+                messages.$add(messageObject);
             }
         }; 
         

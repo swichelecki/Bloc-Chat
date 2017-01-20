@@ -16,8 +16,7 @@ body {
 .bloc-chat-wrapper {
     position: relative;
     padding-left: 20rem;
-   /* min-height: 720px;*/
-    min-height: 45rem;
+    min-height: 46rem;
 }
 
 /* LEFT COLUMN */
@@ -224,3 +223,44 @@ table {
 }
 
 /* END BLOC CHAT VIEW */
+
+/* ADD MESSAGE */
+
+.message-input {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+
+.input-container {
+    height: 4.5rem;
+    background-color: #f6f7fb; 
+}
+
+.add-message-input {
+    width: 70%;
+    padding-left: 2rem;
+    padding-top: 1.6rem;
+    border: none;
+    background-color: #f6f7fb;
+    color: #999;
+    outline-width: 0;
+    font-size: 16px;
+}
+
+.add-message-button {
+    position:fixed;
+    right: 0;
+    width: 8rem;
+    height: 4.5rem;
+    font-size: 18px;
+    background-color: #4a4a4a;
+    color: #f0f0f0;
+    padding: 8px 10px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* END ADD MESSAGE */
